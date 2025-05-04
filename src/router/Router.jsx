@@ -14,6 +14,7 @@ import PrivetRoutes from "../Routes/PrivetRoutes";
 import Dashboard from "../component/Dashboard/Dashboard";
 import Error from "../component/Error/Error";
 import Loading from "../component/Loading/Loading";
+import EventDetails from "../component/Pages/EventDetails";
   
   const router = createBrowserRouter([
     {
@@ -22,10 +23,10 @@ import Loading from "../component/Loading/Loading";
       errorElement: <Error></Error>,
       children:[
         {
-            index: true,
+            path:'/',
             Component: Home,
             hydrateFallbackElement: <Loading></Loading>,
-            loader: ()=> fetch('./event.json')
+            loader: ()=> fetch('../event.json')
         },
         {
           path: '/login',
@@ -42,6 +43,13 @@ import Loading from "../component/Loading/Loading";
         {
           path: '/dashboard',
           element: <PrivetRoutes><Dashboard></Dashboard></PrivetRoutes>
+        },
+        {
+          path:'/eventDetails/:Eventid',
+          element: <PrivetRoutes><EventDetails></EventDetails></PrivetRoutes>,
+          hydrateFallbackElement: <Loading></Loading>,
+            loader: ()=> fetch('../event.json')
+          
         },
         
       ]

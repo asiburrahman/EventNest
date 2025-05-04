@@ -26,9 +26,7 @@ const Slider = () => {
   <div class="flex flex-col justify-center lg:flex-row items-center p-12 lg:p-24">
 
 <div class=" flex-1">
-<h2 class="text-2xl lg:text-4xl font-bold py-3">
-    Upcoming Event
-  </h2>
+
   <h2 class="text-2xl lg:text-4xl font-bold py-1">
   Tech Innovators <br /> Conference 2025
   </h2>
@@ -50,9 +48,7 @@ const Slider3 = <>
   <div class="flex flex-col justify-center lg:flex-row items-center p-12 lg:p-24">
 
 <div class=" flex-1">
-<h2 class="text-2xl lg:text-4xl font-bold py-3">
-    Upcoming Event
-  </h2>
+
   <h2 class="text-2xl lg:text-4xl font-bold py-1">
   Startup Founders Meetup
   </h2>
@@ -74,9 +70,7 @@ const Slider2 = <>
   <div class="flex flex-col justify-center lg:flex-row items-center p-12 lg:p-24">
 
 <div class=" flex-1">
-<h2 class="text-2xl lg:text-4xl font-bold py-3">
-    Upcoming Event
-  </h2>
+
   <h2 class="text-2xl lg:text-4xl font-bold py-1">
   Local Food Festival
   </h2>
@@ -112,8 +106,8 @@ const Slider2 = <>
       navigation
       pagination={{ clickable: true }}
       
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => }
+      // onSlideChange={() => console.log('slide change')}
 
       
     >
