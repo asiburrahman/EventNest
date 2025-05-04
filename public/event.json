@@ -1,0 +1,63 @@
+[
+    {
+      "id": "event_001",
+      "name": "Tech Innovators Conference 2025",
+      "thumbnail": "https://i.ibb.co/ZYW3VTp/tech-event.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "Dhaka Convention Center, Dhaka",
+      "entry_fee": 500,
+      "description": "The Tech Innovators Conference 2025 is a landmark event bringing together the brightest minds in technology, entrepreneurship, and innovation. Held at the Dhaka Convention Center, this immersive conference will feature keynote speeches from global tech leaders, interactive panel discussions, and live demonstrations of cutting-edge advancements in artificial intelligence, blockchain, robotics, and more. Attendees will have the opportunity to network with industry professionals, investors, and startups, fostering collaboration and sparking new ideas. Workshops led by experts will provide hands-on learning in emerging fields, helping participants stay ahead in the fast-evolving tech landscape. With a focus on solving real-world problems through technology, this event aims to inspire the next generation of innovators and entrepreneurs. Whether you're a student, a tech enthusiast, or a seasoned professional, this is a must-attend event to gain insights, skills, and connections that can transform your career and your world."
+    },
+    {
+      "id": "event_002",
+      "name": "Art & Culture Expo 2025",
+      "thumbnail": "https://i.ibb.co/2kbhjVt/art-event.jpg",
+      "category": "Art",
+      "date": "2025-06-10",
+      "location": "National Art Gallery, Dhaka",
+      "entry_fee": 200,
+      "description": "Art & Culture Expo 2025 is a vibrant celebration of Bangladesh's rich artistic heritage and cultural diversity. Set in the iconic National Art Gallery, this week-long event showcases the finest works of local painters, sculptors, and craftspeople alongside traditional dance performances, folk music concerts, and cultural storytelling sessions. Art lovers will enjoy curated exhibitions exploring both contemporary and traditional themes, while interactive workshops will allow attendees to try their hand at various artistic techniques such as watercolor, pottery, and calligraphy. This expo is not just for viewing—it's an immersive cultural journey where every visitor becomes part of the experience. Families, students, and tourists alike can explore heritage stalls, local cuisine, and community installations that reflect the spirit and identity of Bangladeshi culture. Whether you're an art connoisseur or simply curious, this event promises a memorable exploration of creativity and tradition."
+    },
+    {
+      "id": "event_003",
+      "name": "Startup Founders Meetup",
+      "thumbnail": "https://i.ibb.co/sb0p7Qg/startup-event.jpg",
+      "category": "Business",
+      "date": "2025-06-25",
+      "location": "Innovation Hub, Banani",
+      "entry_fee": 300,
+      "description": "The Startup Founders Meetup is a one-day networking and knowledge-sharing event designed specifically for early-stage entrepreneurs, business leaders, and tech startup enthusiasts. Taking place at the Innovation Hub in Banani, this event creates a collaborative environment where founders can connect with potential co-founders, mentors, investors, and tech partners. The schedule includes lightning talks by successful startup founders, Q&A sessions, pitch feedback rounds, and breakout discussion groups focused on common startup challenges like product development, funding, marketing, and team building. Attendees will have the chance to present their business ideas in an open mic session and receive constructive feedback from experienced professionals. Whether you're seeking guidance, collaborators, or just inspiration, this meetup offers a valuable platform to build relationships and take your startup to the next level in a supportive, growth-focused atmosphere."
+    },
+    {
+      "id": "event_004",
+      "name": "Dhaka Marathon 2025",
+      "thumbnail": "https://i.ibb.co/1rMQKqF/marathon-event.jpg",
+      "category": "Sports",
+      "date": "2025-07-05",
+      "location": "Hatirjheel Lake Area, Dhaka",
+      "entry_fee": 100,
+      "description": "The Dhaka Marathon 2025 invites runners of all ages and skill levels to participate in one of the city’s most anticipated sporting events. Set around the scenic Hatirjheel Lake Area, the marathon offers a professionally organized race with multiple distance categories including 5K, 10K, and the full marathon. This event not only promotes health and wellness but also brings together the community in a celebration of perseverance, endurance, and sportsmanship. Participants will receive official race bibs, timing chips, and finisher medals. Water stations, medical aid, and volunteers will be present throughout the route to ensure safety and motivation. Spectators can enjoy live music, food stalls, and cheer zones, making it a citywide festival. The event also supports charitable causes, with proceeds going to local health and education initiatives. Whether you run for fun, fitness, or a cause, this marathon is your chance to be part of something truly energetic and impactful."
+    },
+    {
+      "id": "event_005",
+      "name": "Photography Workshop for Beginners",
+      "thumbnail": "https://i.ibb.co/NZ0C6w2/photo-event.jpg",
+      "category": "Workshop",
+      "date": "2025-07-20",
+      "location": "Dhanmondi Community Center",
+      "entry_fee": 150,
+      "description": "This beginner-friendly Photography Workshop is tailored for anyone looking to explore the art of visual storytelling through the lens. Hosted at the Dhanmondi Community Center, it offers a full day of hands-on training and theoretical guidance from professional photographers. Attendees will learn the fundamentals of camera settings, lighting, composition, and portrait techniques using both DSLR and smartphone cameras. The workshop includes guided photo walks, live shooting sessions, and feedback reviews of participants' work. Participants will also receive a workbook, free editing resources, and access to an exclusive online group for continued learning and support. Whether you're capturing moments for fun, blogging, or aiming to start a photography career, this workshop gives you the creative confidence to start your journey behind the camera. Come with curiosity and leave with a new skill set and a fresh eye for the world around you."
+    },
+    {
+      "id": "event_006",
+      "name": "Local Food Festival",
+      "thumbnail": "https://i.ibb.co/5BzyT7F/food-event.jpg",
+      "category": "Culinary",
+      "date": "2025-08-01",
+      "location": "Ramna Park, Dhaka",
+      "entry_fee": 50,
+      "description": "The Local Food Festival is a culinary celebration designed to bring together food lovers, chefs, and local producers for a weekend of flavor, culture, and community. Held at the green and lively Ramna Park, the festival showcases a rich variety of traditional Bangladeshi dishes alongside contemporary twists from rising culinary talents. Visitors can sample everything from street food favorites like fuchka and kebabs to regional delicacies rarely found in restaurants. In addition to tasting booths, the event features live cooking demonstrations, spice and ingredient markets, recipe workshops, and food-themed games. A kids’ area, live folk music, and picnic spaces make it perfect for family outings. The festival also emphasizes sustainability, with a focus on eco-friendly packaging and reducing food waste. Whether you're a seasoned foodie or just looking to enjoy a delicious weekend, the Local Food Festival is a delightful experience for all senses."
+    }
+  ]
+  
