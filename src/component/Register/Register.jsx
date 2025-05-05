@@ -1,5 +1,5 @@
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
@@ -9,6 +9,7 @@ import { FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const userInfo = use(AuthContext)
+  const [showPassword, setShowPassword] = useState(false)
   const {createUser, updateUserProfile, setUser, user} = userInfo
   const navigate = useNavigate()
 
@@ -73,8 +74,8 @@ const Register = () => {
           <input type="email" className="input" name='mail' placeholder="Email" />
           <label className="label">Password</label>
           <div className='relative'>
-            <input type="password" className="input" name='password' placeholder="Password" />
-            <button className='btn btn-xs absolute top-2 right-6'><FaEye /> <FaEyeSlash /></button>
+            <input type={showPassword?"text":"password"} className="input" name='password' placeholder="Password" />
+            <button onClick={()=> setShowPassword(!showPassword)} className='btn btn-xs absolute top-2 right-6'>{showPassword? <FaEye />: <FaEyeSlash />} </button>
           </div>
           
           

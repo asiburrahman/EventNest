@@ -19,7 +19,7 @@ const location = useLocation()
       toast.success("Your registration is Successful, Thank you!!");
       // console.log("login successfully");
       
-       navigate( '/')
+       navigate(location?.state || '/')
       
     })
     .catch((error) => {
