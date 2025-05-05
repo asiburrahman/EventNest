@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from '../Slider/Slider';
 import { useLoaderData } from 'react-router';
 import Event from '../Pages/Event';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
 
             <h2 class="text-2xl lg:text-4xl font-bold py-3 text-center">
     Upcoming Event</h2>
-    <button className='btn' onClick={()=>toast("Wow so easy!")}>Click me show the tost</button>
+    
             <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {
                 events.map(event=> <Event event={event}></Event>)

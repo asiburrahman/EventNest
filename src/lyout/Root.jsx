@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
         <>
-        <ToastContainer />
+         <ToastContainer /> 
            <Navbar></Navbar> 
           <Outlet></Outlet>
           <Footer></Footer>

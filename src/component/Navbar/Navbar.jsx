@@ -1,20 +1,22 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 // import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Navbar = () => {
 
     const {user, singOutUser} = use(AuthContext)
+    const navigate = useNavigate()
     //  console.log(user);
      
      const handleSignOut =()=>{
         singOutUser().then(()=>{
             console.log('singOut Successfully');
-            toast.success("Cancel Appointment Successfully!!");
+            navigate('/')
+            toast.success("User SingOut Successfully!!");
         }).catch((error)=>{
             console.log(error);
             

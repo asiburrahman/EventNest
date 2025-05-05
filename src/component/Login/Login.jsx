@@ -1,7 +1,7 @@
 import React, { use, useRef } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -14,12 +14,12 @@ const location = useLocation()
     e.preventDefault();
     const email = e.target.email.value
     const password = e.target.password.value
-
+    
     singInUser(email, password).then((result) => {
-      toast("Wow so easy!")
-      console.log("login successfully");
+      toast.success("Your registration is Successful, Thank you!!");
+      // console.log("login successfully");
       
-      navigate(location?.state || '/')
+       navigate( '/')
       
     })
     .catch((error) => {
@@ -45,6 +45,8 @@ const location = useLocation()
           <div><a onClick={handleForget} className="link link-hover">Forgot password?</a></div>
           <button className="btn btn-neutral mt-4">Login</button>
         </form>
+        <div className=' text-md font-bold text-center text-emerald-300'>Register With Google</div>
+                  <button className="btn bg-emerald-300 mt-1">Google Login</button>
         <p>If You Have No Account  <NavLink className='text-blue-400' to='/register'>Please Register</NavLink> </p>
       </div>
     </div>

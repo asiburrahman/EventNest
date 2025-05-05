@@ -3,6 +3,8 @@ import React, { use } from 'react';
 import { NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 // import { auth } from '../../firebase.init';
 
 const Register = () => {
@@ -35,7 +37,7 @@ const Register = () => {
 
               setUser({...userinfo, name, photoUrl})
               console.log(userinfo);
-              toast.success("Your registration is Successful, Thank you!!");
+              toast.success("User Login Successful!!");
               // setUser({...user, displayName: name, photoURL: photoUrl})
               // console.log(user);
               
@@ -70,12 +72,15 @@ const Register = () => {
           <label className="label" >Email</label>
           <input type="email" className="input" name='mail' placeholder="Email" />
           <label className="label">Password</label>
-          <input type="password" className="input" name='password' placeholder="Password" />
+          <div className='relative'>
+            <input type="password" className="input" name='password' placeholder="Password" />
+            <button className='btn btn-xs absolute top-2 right-6'><FaEye /> <FaEyeSlash /></button>
+          </div>
+          
           
           <button className="btn btn-neutral mt-4">Login</button>
         </form>
-          <div className=' text-md font-bold text-center text-emerald-300'>Register With Google</div>
-          <button className="btn bg-emerald-300 mt-1">Google Login</button>
+          
         <p>If You Already Have Account  <NavLink className='text-blue-400' to='/login'>Please Login</NavLink> </p>
       </div>
     </div>

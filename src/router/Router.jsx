@@ -16,6 +16,7 @@ import Error from "../component/Error/Error";
 import Loading from "../component/Loading/Loading";
 import EventDetails from "../component/Pages/EventDetails";
 import ForgatePassword from "../component/ForgatePassword/ForgatePassword";
+import Profile from "../component/Profile/Profile";
   
   const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ import ForgatePassword from "../component/ForgatePassword/ForgatePassword";
         {
           path: '/forgatePassword/:email',
           element: <ForgatePassword></ForgatePassword>
+        },
+        {
+          path: '/profile',
+          element: <PrivetRoutes><Profile></Profile></PrivetRoutes>
         },
         
       ]
