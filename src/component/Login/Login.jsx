@@ -16,7 +16,7 @@ const location = useLocation()
     const password = e.target.password.value
     
     singInUser(email, password).then((result) => {
-      toast.success("Your registration is Successful, Thank you!!");
+      toast.success("User Sign in Successful!!");
       // console.log("login successfully");
       
        navigate(location?.state || '/')

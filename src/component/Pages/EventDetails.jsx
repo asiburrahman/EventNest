@@ -5,7 +5,7 @@ const EventDetails = () => {
     const events = useLoaderData()
     const {Eventid} = useParams()
     const event = events.find(e => e.id===Eventid )
-    console.log(event);
+    // console.log(event);
      const {id, name, thumbnail, category, date, location, entry_fee, description} = event;
     
     return (

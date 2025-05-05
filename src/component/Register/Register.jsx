@@ -27,13 +27,15 @@ const Register = () => {
 
          setErrorMessage('')
 
-         const passwordCheker = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         const passwordCheker = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
 
          if (passwordCheker.test(password)=== false) {
-          setErrorMessage("Password must have one lowercase, one uppercase, one digit and 8 characters or longer")
+          setErrorMessage("Password must have one lowercase, one uppercase, one digit and 6 characters or longer")
+          
           return;
          }
 
+         
          
          
         //password Authentication
@@ -73,14 +75,16 @@ const Register = () => {
           })
 
        
-
-
+        
     }
 
+    if (errorMessage) {
+      toast.success(errorMessage);
+    }
    
     return (
         <div className="card bg-base-100 mt-20 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
-          <ToastContainer />
+           <ToastContainer /> 
       <div className="card-body">
       <h1 className="text-2xl font-bold text-center">Register now!</h1>
         <form onSubmit={handleRegister} className="fieldset">
