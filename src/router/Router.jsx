@@ -15,6 +15,7 @@ import Dashboard from "../component/Dashboard/Dashboard";
 import Error from "../component/Error/Error";
 import Loading from "../component/Loading/Loading";
 import EventDetails from "../component/Pages/EventDetails";
+import ForgatePassword from "../component/ForgatePassword/ForgatePassword";
   
   const router = createBrowserRouter([
     {
@@ -50,6 +51,11 @@ import EventDetails from "../component/Pages/EventDetails";
           hydrateFallbackElement: <Loading></Loading>,
             loader: ()=> fetch('../event.json')
           
+        },
+
+        {
+          path: '/forgatePassword/:email',
+          element: <ForgatePassword></ForgatePassword>
         },
         
       ]

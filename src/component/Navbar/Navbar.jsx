@@ -2,6 +2,9 @@ import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 // import { AuthContext } from '../../context/AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Navbar = () => {
 
@@ -11,7 +14,7 @@ const Navbar = () => {
      const handleSignOut =()=>{
         singOutUser().then(()=>{
             console.log('singOut Successfully');
-            
+            toast.success("Cancel Appointment Successfully!!");
         }).catch((error)=>{
             console.log(error);
             
@@ -56,10 +59,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                {
-                user? <>
-                <span>{user.email}</span>
+                user? < div className='flex justify-center items-center gap-2'>
+                <span className=''><img title={user.displayName} className='max-w-10 rounded-full' src={user.photoURL} alt="" /></span>
                 <a onClick={handleSignOut} className="btn border-none  ">Sign Out</a>
-                </> 
+                </div> 
                  : <Link className='hover:bg-gray-200 p-2 px-4 rounded' to="/login">Login</Link>
 
                } 
