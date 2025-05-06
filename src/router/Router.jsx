@@ -38,10 +38,7 @@ import Profile from "../component/Profile/Profile";
           path: '/register',
           Component: Register,
         },
-        {
-          path: '/order',
-          element: <PrivetRoutes><Order></Order></PrivetRoutes>
-        },
+        
         {
           path: '/dashboard',
           element: <PrivetRoutes><Dashboard></Dashboard></PrivetRoutes>

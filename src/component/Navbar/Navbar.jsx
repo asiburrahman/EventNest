@@ -35,7 +35,6 @@ const Navbar = () => {
                   <li><NavLink to='/register'>Register</NavLink></li></>} */}
                   <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
                   {user && <>
-                             <li><NavLink to='/order'>orders</NavLink></li>
                              <li><NavLink to='/profile'>Profile</NavLink></li>
                         </>
                   }
