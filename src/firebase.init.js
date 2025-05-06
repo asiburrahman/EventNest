@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 //don't do this in project
 const firebaseConfig = {
-  apiKey: "AIzaSyDST4AIMlvbzaLV69DRdMwpVSbv54pTHwA",
-  authDomain: "react-password-auth.firebaseapp.com",
-  projectId: "react-password-auth",
-  storageBucket: "react-password-auth.firebasestorage.app",
-  messagingSenderId: "520521128884",
-  appId: "1:520521128884:web:601f623b718f1b0746b0e1"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router';
 import Event from '../Pages/Event';
 import { ToastContainer } from 'react-toastify';
 import TrustedCompanies from '../Pages/TrustedCompanies';
+import CountUp from 'react-countup';
 
 
 const Home = () => {
@@ -15,6 +16,8 @@ const Home = () => {
         
         <div className='w-11/12 mx-auto'>
             <ToastContainer />
+
+            
             <Slider>
             
             </Slider>
@@ -24,7 +27,7 @@ const Home = () => {
     
             <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {
-                events.map(event=> <Event event={event}></Event>)
+                events.map(event=> <Event key={event.id} event={event}></Event>)
             }
             </div>
 
@@ -65,19 +68,19 @@ const Home = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700">7M+</h3>
+              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={7000} />+</h3>
               <p className="text-gray-600 text-sm">events managed</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700">315M+</h3>
+              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={250000} />+</h3>
               <p className="text-gray-600 text-sm">registrations processed</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700">1K+</h3>
+              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={1000} />+</h3>
               <p className="text-gray-600 text-sm">5-star ratings on G2</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-blue-700">24/7</h3>
+              <h3 className="text-2xl font-semibold text-blue-700"><CountUp duration={10} end={24} />/ <CountUp duration={10} end={7} /></h3>
               <p className="text-gray-600 text-sm">customer support</p>
             </div>
           </div>

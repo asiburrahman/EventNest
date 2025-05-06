@@ -88,7 +88,7 @@ const location = useLocation()
           <div><a onClick={handleForget} className="link link-hover">Forgot password?</a></div>
           <button className="btn btn-neutral mt-4">Login</button>
         </form>
-        <div className=' text-md font-bold text-center text-emerald-300'>Register With Google</div>
+        <div className=' text-md font-bold text-center text-emerald-300'>Login With Google</div>
                   <button onClick={handleGoogleSignin} className="btn bg-emerald-300 mt-1">Google Login</button>
         <p>If You Have No Account  <NavLink className='text-blue-400' to='/register'>Please Register</NavLink> </p>
       </div>

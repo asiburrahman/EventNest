@@ -8,7 +8,7 @@ const Dashboard = () => {
    
     const handleInterest = (interest) => {
         toast.success(`You selected ${interest}. Thank you for your selection!`);
-        console.log(interest);
+        // console.log(interest);
         
       };
     

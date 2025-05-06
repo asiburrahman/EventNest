@@ -20,9 +20,9 @@ const Profile = () => {
                       
                       
                     }).catch((error) => {
-                     console.log(error);
+                     
                      setUser(user)
-                     toast.success("Your registration is Successful, Thank you!!");
+                     toast.error(error.message);
                     });
 
     }
@@ -52,7 +52,7 @@ const Profile = () => {
                     </div>
                     <div >
                         <h1>User Photo URL</h1>
-                        <h2 className="text-2xl font-semibold">{user.photoURL}</h2>
+                        <h2 className="text-sm lg:text-2xl font-semibold">{user.photoURL}</h2>
                         
                     </div>
                 </div>

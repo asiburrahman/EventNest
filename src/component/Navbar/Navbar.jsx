@@ -42,8 +42,9 @@ const Navbar = () => {
     return (
         <>
         {/* <ToastContainer /> */}
+        
         <div className='bg-gray-100'>
-             
+        
             <div className="navbar   w-11/12 mx-auto">
             <div className="navbar-start ">
                 <div className="dropdown">
@@ -67,9 +68,9 @@ const Navbar = () => {
                {
                 user? < div className='flex justify-center items-center gap-2'>
                 <span className=''><img title={user.displayName} className='max-w-10 rounded-full' src={user.photoURL} alt="" /></span>
-                <a onClick={handleSignOut} className="btn border-none  ">Sign Out</a>
+                <a onClick={handleSignOut} className="btn border-none  ">Sign Out </a>
                 </div> 
-                 : <Link className='hover:bg-gray-200 p-2 px-4 rounded' to="/login">Login</Link>
+                 : <Link className='hover:bg-gray-200 p-2 px-4 rounded' to="/login">Login </Link>
 
                } 
             </div>

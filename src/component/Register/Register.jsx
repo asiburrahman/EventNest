@@ -63,7 +63,7 @@ const Register = () => {
             }).catch((error) => {
 
             
-             
+              setErrorMessage(error.message );
              setUser(userinfo)
              
             });
@@ -80,7 +80,7 @@ const Register = () => {
     }
 
     if (errorMessage) {
-      toast.success(errorMessage);
+      toast.error(errorMessage);
     }
 
     const handleGoogleSignin=()=>{
@@ -140,7 +140,7 @@ const Register = () => {
           <button className="btn btn-neutral mt-4">Register</button>
         </form>
 
-                <div className=' text-md font-bold text-center text-emerald-300'>Register With Google</div>
+                <div className=' text-md font-bold text-center text-emerald-300'>Login With Google</div>
                   <button onClick={handleGoogleSignin} className="btn bg-emerald-300 mt-1">Google Login</button>
           
         <p>If You Already Have Account  <NavLink className='text-blue-400' to='/login'>Please Login</NavLink> </p>

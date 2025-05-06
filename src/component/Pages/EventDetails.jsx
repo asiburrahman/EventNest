@@ -13,7 +13,7 @@ const EventDetails = () => {
           e.preventDefault()
           const name = e.target.name.value;
           console.log(name);
-          toast.success(`MR. ${name} your reservation is successful!!`);
+          toast.success(`${name} your reservation is successful!!`);
           
      }
     
