@@ -69,7 +69,7 @@ const Profile = () => {
           <input required type="text" className="input w-full" name='name'  placeholder="Enter Your Name" />
           <label className="label">Photo URL</label>
           <input required type="text" className="input w-full" name='photo' placeholder="Enter Your Photo URL" />
-          <button className="btn btn-neutral mt-4">Login</button>
+          <button className="btn btn-neutral mt-4">Update</button>
         </form>
         
         

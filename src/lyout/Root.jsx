@@ -24,8 +24,9 @@ const Root = () => {
         <>
        
 
-         <ToastContainer /> 
+         
            <Navbar></Navbar> 
+           {/* <ToastContainer />  */}
           <Outlet></Outlet>
           <Footer></Footer>
         </>

@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 // import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
 
 
 
@@ -28,6 +29,7 @@ const Navbar = () => {
     // console.log(userInfo);
     
     const link = <>
+                    {/* <ToastContainer /> */}
                   <li><NavLink to='/'>Home</NavLink></li>
                   {/* { !user && <><li><NavLink to='/login'>Login</NavLink></li>
                   <li><NavLink to='/register'>Register</NavLink></li></>} */}
