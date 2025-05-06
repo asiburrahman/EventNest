@@ -42,6 +42,26 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
+            <section className='pb-4'>
+
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+        <p className="text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} EventNest. All rights reserved By Asibur Rahman.
+        </p>
+        <div className="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" className="text-gray-400 hover:text-white text-sm">
+            Privacy Policy
+          </a>
+          <a href="#" className="text-gray-400 hover:text-white text-sm">
+            Terms of Service
+          </a>
+          <a href="#" className="text-gray-400 hover:text-white text-sm">
+            Contact
+          </a>
+        </div>
+      </div>
+            </section>
         </footer>   
     );
 };

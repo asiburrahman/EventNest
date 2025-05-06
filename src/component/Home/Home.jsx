@@ -3,6 +3,7 @@ import Slider from '../Slider/Slider';
 import { useLoaderData } from 'react-router';
 import Event from '../Pages/Event';
 import { ToastContainer } from 'react-toastify';
+import TrustedCompanies from '../Pages/TrustedCompanies';
 
 
 const Home = () => {
@@ -83,6 +84,11 @@ const Home = () => {
         </div>
       </div>
     </div>
+            </section>
+
+
+            <section>
+                <TrustedCompanies></TrustedCompanies>
             </section>
            
         </div>
