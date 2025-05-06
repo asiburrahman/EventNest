@@ -23,10 +23,8 @@ const Event = ({event}) => {
     <h2 className=" text-2xl font-bold">{name}</h2>
     <p className='text-gray-600'>{category}</p>
     <div className='flex justify-start items-center gap-2 border-dashed border-t-1 border-gray-300 w-full py-2'>
-    <div className="w-4 h-4 flex items-center justify-center rounded-full  text-black text-xs border">
-  R
-</div>
-        <p className='text-gray-600'>{date}</p>
+   
+        <p className='text-gray-600'>Date: {date}</p>
     </div>
     <div className="w-full pb-6">
       <NavLink to={`../eventDetails/${id}`}> <button className="btn text-lg border-[#176AE5] cursor-pointer p-5 w-full rounded-4xl text-[#176AE5] bg-transparent">View Details</button></NavLink>

@@ -11,7 +11,7 @@ const Root = () => {
     
     useEffect(()=>{
         
-        console.log(location);
+        // console.log(location);
         if (location.pathname) {
             document.title = location.pathname || "Default Title";
         }
