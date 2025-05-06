@@ -14,7 +14,9 @@ const Home = () => {
         
         <div className='w-11/12 mx-auto'>
             <ToastContainer />
-            <Slider></Slider>
+            <Slider>
+            
+            </Slider>
 
             <h2 class="text-2xl lg:text-4xl font-bold py-3 text-center">
     Upcoming Event</h2>

@@ -13,7 +13,7 @@ const Register = () => {
   const userInfo = use(AuthContext)
   const [showPassword, setShowPassword] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
-  const {createUser, updateUserProfile, setUser, user} = userInfo
+  const { googleSignin,createUser, updateUserProfile, setUser, user, } = userInfo
   const navigate = useNavigate()
 
     const handleRegister = (e)=>{
@@ -61,7 +61,8 @@ const Register = () => {
               
               
             }).catch((error) => {
-             console.log(error);
+
+            
              
              setUser(userinfo)
              
@@ -81,6 +82,41 @@ const Register = () => {
     if (errorMessage) {
       toast.success(errorMessage);
     }
+
+    const handleGoogleSignin=()=>{
+
+      setShowPassword('')
+      googleSignin().then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // console.log(user);
+        setUser(user)
+  
+        navigate(location?.state || '/')
+        toast.success("User Login Successfully By Google");
+        
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        setShowPassword(errorCode);
+        const errorMessage = error.message;
+  
+        setShowPassword(errorMessage);
+        // The email of the user's account used.
+        const email = error.customData.email;
+        setShowPassword(email);
+        // The AuthCredential type that was used.
+        const credential = <GoogleAuthProvider></GoogleAuthProvider>.credentialFromError(error);
+        setShowPassword(credential);
+        // ...
+      });
+    }
+  
    
     return (
         <div className="card bg-base-100 mt-20 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
@@ -103,6 +139,9 @@ const Register = () => {
           {/* (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} */}
           <button className="btn btn-neutral mt-4">Register</button>
         </form>
+
+                <div className=' text-md font-bold text-center text-emerald-300'>Register With Google</div>
+                  <button onClick={handleGoogleSignin} className="btn bg-emerald-300 mt-1">Google Login</button>
           
         <p>If You Already Have Account  <NavLink className='text-blue-400' to='/login'>Please Login</NavLink> </p>
         {errorMessage && <p className='text-red-600 font-bold pt-1'>{errorMessage}</p>

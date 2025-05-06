@@ -29,7 +29,7 @@ const Navbar = () => {
     // console.log(userInfo);
     
     const link = <>
-                    {/* <ToastContainer /> */}
+                   
                   <li><NavLink to='/'>Home</NavLink></li>
                   {/* { !user && <><li><NavLink to='/login'>Login</NavLink></li>
                   <li><NavLink to='/register'>Register</NavLink></li></>} */}
@@ -41,7 +41,10 @@ const Navbar = () => {
                   }
                 </>
     return (
+        <>
+        {/* <ToastContainer /> */}
         <div className='bg-gray-100'>
+             
             <div className="navbar   w-11/12 mx-auto">
             <div className="navbar-start ">
                 <div className="dropdown">
@@ -73,7 +76,7 @@ const Navbar = () => {
             </div>
             </div>
         </div>
-                    
+                </>    
     );
 };
 

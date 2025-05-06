@@ -22,12 +22,9 @@ const Root = () => {
 
     return (
         <>
-       
-
-         
-           <Navbar></Navbar> 
-           {/* <ToastContainer />  */}
-          <Outlet></Outlet>
+        {/* <ToastContainer /> */}
+        <Navbar> </Navbar>
+         <Outlet></Outlet>
           <Footer></Footer>
         </>
     );

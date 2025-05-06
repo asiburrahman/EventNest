@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { toast, ToastContainer } from 'react-toastify';
 
 const EventDetails = () => {
     const events = useLoaderData()
@@ -7,9 +8,18 @@ const EventDetails = () => {
     const event = events.find(e => e.id===Eventid )
     // console.log(event);
      const {id, name, thumbnail, category, date, location, entry_fee, description} = event;
+
+     const handleReservation =(e)=>{
+          e.preventDefault()
+          const name = e.target.name.value;
+          console.log(name);
+          toast.success(`MR. ${name} your reservation is successful!!`);
+          
+     }
     
     return (
         <div>
+          <ToastContainer />
             <div className=" flex flex-col justify-center items-center gap-2 bg-base-100 w-11/12 shadow-sm overflow-hidden mx-auto p-4 rounded-2xl">
   <figure className=" w-full overflow-hidden">
     <img 
@@ -45,14 +55,14 @@ const EventDetails = () => {
 
           <div className="w-11/12 mx-auto p-8 space-y-3 ">
           <h1 className="text-2xl font-bold text-center">Reserve a seat</h1>
-          <form noValidate="" action="" className="space-y-6">
+          <form onSubmit={handleReservation} noValidate="" action="" className="space-y-6">
             <div className="space-y-1 text-sm">
               <label htmlFor="username" className="block dark:text-gray-600">Username</label>
               <input type="text" required  name="name" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
             </div>
             <div className="space-y-1 text-sm">
               <label htmlFor="password" className="block dark:text-gray-600">Email</label>
-              <input type="email" required name="email" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+              <input  type="email" required name="email" id="password" placeholder="user Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
               <div className="flex justify-end text-xs dark:text-gray-600">
               </div>
             </div>
