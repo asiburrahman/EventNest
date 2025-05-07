@@ -85,7 +85,7 @@ const Register = () => {
 
     const handleGoogleSignin=()=>{
 
-      setShowPassword('')
+      setErrorMessage('')
       googleSignin().then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         // const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -95,7 +95,7 @@ const Register = () => {
         // console.log(user);
         setUser(user)
   
-        navigate(location?.state || '/')
+        // navigate(location?.state || '/')
         toast.success("User Login Successfully By Google");
         
         // IdP data available using getAdditionalUserInfo(result)
@@ -103,16 +103,16 @@ const Register = () => {
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
-        setShowPassword(errorCode);
+        setErrorMessage(errorCode);
         const errorMessage = error.message;
   
-        setShowPassword(errorMessage);
+        setErrorMessage(errorMessage);
         // The email of the user's account used.
         const email = error.customData.email;
-        setShowPassword(email);
+        setErrorMessage(email);
         // The AuthCredential type that was used.
         const credential = <GoogleAuthProvider></GoogleAuthProvider>.credentialFromError(error);
-        setShowPassword(credential);
+        setErrorMessage(credential);
         // ...
       });
     }
@@ -133,7 +133,7 @@ const Register = () => {
           <label className="label">Password</label>
           <div className='relative'>
             <input required type={showPassword?"text":"password"} className="input" name='password' placeholder="Password" />
-            <button onClick={()=> setShowPassword(!showPassword)} className='btn btn-xs absolute top-2 right-6'>{showPassword? <FaEye />: <FaEyeSlash />} </button>
+            <button onClick={(e)=> {e.preventDefault(), setShowPassword(!showPassword)}} className='btn btn-xs absolute top-2 right-6'>{showPassword? <FaEye />: <FaEyeSlash />} </button>
           </div>
           
           {/* (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} */}

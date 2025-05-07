@@ -9,7 +9,6 @@ import Root from "../lyout/Root";
 import Home from "../component/Home/Home";
 import Login from "../component/Login/Login";
 import Register from "../component/Register/Register";
-import Order from "../component/Order/Order";
 import PrivetRoutes from "../Routes/PrivetRoutes";
 import Dashboard from "../component/Dashboard/Dashboard";
 import Error from "../component/Error/Error";
@@ -17,6 +16,7 @@ import Loading from "../component/Loading/Loading";
 import EventDetails from "../component/Pages/EventDetails";
 import ForgatePassword from "../component/ForgatePassword/ForgatePassword";
 import Profile from "../component/Profile/Profile";
+import LoginProtectedRouts from "../Routes/LoginProtectedRouts";
   
   const router = createBrowserRouter([
     {
@@ -30,13 +30,28 @@ import Profile from "../component/Profile/Profile";
             hydrateFallbackElement: <Loading></Loading>,
             loader: ()=> fetch('../event.json')
         },
+        // {
+        //   path: '/login',
+        //   Component: Login,
+        // },
+        // {
+        //   path: '/login',
+        //   element: <PrivetRoutes><Login></Login></PrivetRoutes>
+        // },
+
         {
           path: '/login',
-          Component: Login,
+          element: <LoginProtectedRouts><Login></Login></LoginProtectedRouts>
         },
+
+        // {
+        //   path: '/register',
+        //   Component: Register,
+        // },
+
         {
           path: '/register',
-          Component: Register,
+          element: <LoginProtectedRouts><Register></Register></LoginProtectedRouts>
         },
         
         {

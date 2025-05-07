@@ -22,7 +22,7 @@ const location = useLocation()
       toast.success("User Sign in Successful!!");
       // console.log("login successfully");
       
-       navigate(location?.state || '/')
+      //  navigate(location?.state || '/')
       
     })
     .catch((error) => {
@@ -45,7 +45,7 @@ const location = useLocation()
       // console.log(user);
       setUser(user)
 
-      navigate(location?.state || '/')
+      // navigate(location?.state || '/')
       toast.success("User Login Successfully By Google");
       
       // IdP data available using getAdditionalUserInfo(result)

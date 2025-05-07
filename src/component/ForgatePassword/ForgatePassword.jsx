@@ -3,6 +3,7 @@ import { use } from 'react';
 import {  useParams } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -17,13 +18,13 @@ const ForgatePassword = () => {
     e.preventDefault()
         resetUserPassword(email).then(() => {
             toast.success("A reset password link sent your mail, Please check your mail!!");
-            window.location.href = 'https://www.gmail.com'
-            // window.open('https://www.google.com', '_blank', 'noopener,noreferrer');
+            // window.location.href = 'https://www.gmail.com'
+            window.open('https://www.gmail.com', '_blank', 'noopener,noreferrer');
           })
           .catch((error) => {
             // const errorCode = error.code;
             const errorMessage = error.message;
-            toast.success(`${errorMessage}`);
+            toast.error(`${errorMessage}`);
             // ..
           });
     }
@@ -31,6 +32,7 @@ const ForgatePassword = () => {
 
     return (
                     <div className="w-7/12 mx-auto p-8 space-y-3 rounded-xl  dark:text-gray-800">
+                         <ToastContainer />
                 <h1 className="text-2xl font-bold text-center">Resetting The Password</h1>
                 <form noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-sm">

@@ -6,12 +6,12 @@ import Loading from '../component/Loading/Loading';
 
 const PrivetRoutes = ({children}) => {
     const{user, loading} = use(AuthContext)
-   
+    
     const location = useLocation()
 
     useEffect(()=>{
             
-            console.log(location);
+            // console.log(location);
             if (location.pathname) {
                 document.title = location.pathname || "Default Title";
             }
@@ -28,9 +28,16 @@ const PrivetRoutes = ({children}) => {
         </>
     }
 
+     
+
     if (!user) {
         return <Navigate state={location.pathname} to="/login"></Navigate>
     }
+
+   
+
+    console.log(location.pathname);
+    
 
     return (
         <div>

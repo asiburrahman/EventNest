@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
 
 const EventDetails = () => {
     const events = useLoaderData()
     const {Eventid} = useParams()
+    // const [rating, setRating] = useState(3);
     const event = events.find(e => e.id===Eventid )
     // console.log(event);
      const {id, name, thumbnail, category, date, location, entry_fee, description} = event;
@@ -21,6 +22,11 @@ const EventDetails = () => {
         <div>
           <ToastContainer />
             <div className=" flex flex-col justify-center items-center gap-2 bg-base-100 w-11/12 shadow-sm overflow-hidden mx-auto p-4 rounded-2xl">
+            {/* <Rating
+      style={{ maxWidth: 180 }}
+      value={rating}
+      onChange={setRating}
+    /> */}
   <figure className=" w-full overflow-hidden">
     <img 
       src={thumbnail}
@@ -49,6 +55,7 @@ const EventDetails = () => {
     <p className='font-bold text-xl '>Event Fee: </p>
     <p>USD : {entry_fee}$ (incl. Vat) Per consultation</p>
     </div>
+    
   </div>
   </div>
   {/* //---------------------------- booking-------------------------- */}

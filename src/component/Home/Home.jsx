@@ -22,7 +22,7 @@ const Home = () => {
             
             </Slider>
 
-            <h2 class="text-2xl lg:text-4xl font-bold py-3 text-center">
+            <h2 className="text-2xl lg:text-4xl font-bold py-3 text-center">
     Upcoming Event</h2>
     
             <div className='grid justify-items-stretch  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
