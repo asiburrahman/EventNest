@@ -36,7 +36,7 @@ const PrivetRoutes = ({children}) => {
 
    
 
-    console.log(location.pathname);
+    // console.log(location.pathname);
     
 
     return (

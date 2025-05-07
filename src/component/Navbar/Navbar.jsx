@@ -15,7 +15,7 @@ const Navbar = () => {
      
      const handleSignOut =()=>{
         singOutUser().then(()=>{
-            console.log('singOut Successfully');
+            // console.log('singOut Successfully');
             navigate('/')
             toast.success("User SingOut Successfully!!");
         }).catch((error)=>{
