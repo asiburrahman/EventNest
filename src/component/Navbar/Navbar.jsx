@@ -67,7 +67,7 @@ const Navbar = () => {
             <div className="navbar-end">
                {
                 user? < div className='flex justify-center items-center gap-2'>
-                <span className=''><img title={user.displayName} className='max-w-10 rounded-full' src={user.photoURL} alt="" /></span>
+                <span className=''><img title={user.displayName} className='w-10 h-10 rounded-full' src={user.photoURL} alt="" /></span>
                 <a onClick={handleSignOut} className="btn border-none  ">Sign Out </a>
                 </div> 
                  : <Link className='hover:bg-gray-200 p-2 px-4 rounded' to="/login">Login </Link>

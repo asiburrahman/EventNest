@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+
 import { useLoaderData, useParams } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
+import Ratting from '../Ratting/Ratting';
 
 const EventDetails = () => {
     const events = useLoaderData()
     const {Eventid} = useParams()
-    // const [rating, setRating] = useState(3);
     const event = events.find(e => e.id===Eventid )
     // console.log(event);
      const {id, name, thumbnail, category, date, location, entry_fee, description} = event;
@@ -13,7 +13,7 @@ const EventDetails = () => {
      const handleReservation =(e)=>{
           e.preventDefault()
           const name = e.target.name.value;
-          console.log(name);
+          // console.log(name);
           toast.success(`${name} your reservation is successful!!`);
           
      }
@@ -55,7 +55,37 @@ const EventDetails = () => {
     <p className='font-bold text-xl '>Event Fee: </p>
     <p>USD : {entry_fee}$ (incl. Vat) Per consultation</p>
     </div>
-    
+    <div>
+              <Ratting></Ratting>
+    </div>
+    {/* ----------------------------------comment box------------------- */}
+    <div className="max-w-x mt-8 p-4 bg-white rounded-2xl shadow-md">
+  <div className="flex items-start space-x-4">
+    {/* User Avatar */}
+    <img
+      src="https://i.pravatar.cc/40"
+      alt="User avatar"
+      className="w-10 h-10 rounded-full object-cover"
+    />
+
+    {/* Comment Input */}
+    <div className="flex-1">
+      <textarea
+        rows="3"
+        placeholder="Write a comment..."
+        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+      ></textarea>
+
+      {/* Action Buttons */}
+      <div className="flex justify-end mt-2">
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200">
+          Post Comment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
   </div>
   </div>
   {/* //---------------------------- booking-------------------------- */}
